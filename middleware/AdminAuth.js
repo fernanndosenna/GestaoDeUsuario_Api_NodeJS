@@ -6,7 +6,6 @@ caso sim, o usuário poderá prosseguir na requisição
 const jwt = require('jsonwebtoken');
 var secret = "fsdfsdfsdfsdfsfs";
 
-//token nao ta chegando aqui do vue js
 module.exports = function(req,res,next){
     const authToken = req.headers['authorization']
  
