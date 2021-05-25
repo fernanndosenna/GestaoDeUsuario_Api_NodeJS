@@ -9,7 +9,7 @@ var bcrypt = require("bcrypt");
 
 
 /*
-var SMTP_CONFIG = require("../config/smtp")
+var SMTP_CONFIG = require("../config/smtp") ///adicionaro arquivo smtp dentro de um diretório "config"
 var nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
