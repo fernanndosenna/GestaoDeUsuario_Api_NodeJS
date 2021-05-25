@@ -6,6 +6,26 @@ var secret = "fsdfsdfsdfsdfsfs";
 
 var bcrypt = require("bcrypt");
 
+
+
+/*
+var SMTP_CONFIG = require("../config/smtp")
+var nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+    host: SMTP_CONFIG.host,
+    port: SMTP_CONFIG.port,
+    secure: true,
+    auth: {
+        user: SMTP_CONFIG.user,
+        pass: SMTP_CONFIG.pass
+    },
+    tls:{
+        rejectUnauthorized: false,
+    },
+})
+*/
+
 class UserController{
 
     async index(req,res){
@@ -104,6 +124,19 @@ class UserController{
           
                 if(result.status){
                     //mandar email com token  atráves do nodemailer.send()
+                    
+                       //envio de token para o gmail
+                    /*
+                    const mailSent = await transporter.sendMail({
+
+                        text: `seu token para alteração de senha ${result.token}`,
+                        subject: "Token",
+                        from: "Antonio Sena <antonio.fernando.pf@gmail.com>",
+                        to: ['antonio.fernando.pf@gmail.com'] //substituir por app.email do cliente
+                    })
+                    console.log(mailSent);
+                    */
+                    
                     res.status(200);
                     res.send("" + result.token);
                 
