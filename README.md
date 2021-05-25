@@ -103,7 +103,6 @@ Deve passar o email o qual o usuário pretender trocar a senha.
 ```
 ## POST /changepassword ( alterar a senha )
 
-é necessário o token obtivo através da rota /recoverpassword juntamente com a senha nova
 ```
 {
     "token" : "1620333555582",
